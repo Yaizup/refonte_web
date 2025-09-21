@@ -1457,8 +1457,4 @@ footer.footer{
 
 
 
-/* Supprime tout overflow sur tous les éléments */
-*, *::before, *::after {
-	overflow: visible !important;
-}
 
