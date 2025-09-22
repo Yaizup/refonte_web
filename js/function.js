@@ -13,16 +13,7 @@
 	$('#main-menu').slicknav({prependTo:'#responsive-menu',label:'', closeOnClick:true});
 	
 	/* Stickey Header */
-	window.onscroll = function() {myFunction()};
-	var navbar = document.getElementById("main-navbar");
-	var sticky = navbar.offsetTop;
-	function myFunction(){
-		if (window.pageYOffset >= sticky) {
-			navbar.classList.add("sticky-header")
-		} else {
-			navbar.classList.remove("sticky-header");
-		}
-	}
+
 	
 	/* Top Menu */
 	$(document).on('click','.navbar-nav li a, #responsive-menu ul li a',function(){

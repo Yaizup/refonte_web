@@ -1,12 +1,40 @@
+/* Sous-titres principaux (ex: Il existe 6 classes d’ULM) */
+.main-section-subtitle {
+	font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+	font-weight: 600;
+	font-size: 1.35rem;
+	color: #222;
+	text-align: center;
 
-.card:hover {
-	transform: scale(1.045);
-	box-shadow: 0 8px 32px rgba(0,0,0,0.13);
-	z-index: 2;
+	letter-spacing: 0.1px;
 }
-.card {
-	transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s;
+/* Hover bouton "Réserver un vol" plus foncé (léger) */
+.btn-orange.btn-reserver:hover {
+	background: #e07a1a !important;
+	color: #fff !important;
 }
+.btn-blue.btn-reserver:hover {
+	background: #2176b6 !important;
+	color: #fff !important;
+}
+.btn-green.btn-reserver:hover {
+	background: #1e9e4a !important;
+	color: #fff !important;
+}
+/* Prix offre hover effet plus clair */
+.prix-offre {
+	transition: color 0.2s;
+}
+.text-orange.prix-offre:hover {
+	color: #ffb366 !important;
+}
+.text-blue.prix-offre:hover {
+	color: #7ecbff !important;
+}
+.text-green.prix-offre:hover {
+	color: #7ee6a2 !important;
+}
+
 
 /*
 	Template Name 	: First Step - School & Education Institute HTML Template
@@ -178,17 +206,6 @@ header .navbar{
 	z-index: 10;
 }
 
-header .navbar:after{
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	height: 20px;
-	bottom: -16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	z-index: 100;
-}
 
 header .navbar-collapse.collapse{
 	-webkit-box-pack: end;
@@ -330,19 +347,6 @@ header .navbar-collapse.collapse{
 	position: relative;
 }
 
-.banner-slider:after{
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0px;
-	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	transform: rotate(180deg);
-	z-index: 1;
-}
-
 .banner-slider .container-fluid{
 	padding-left: 0;
 	padding-right: 0;
@@ -470,28 +474,20 @@ header .navbar-collapse.collapse{
 	position: relative;
 }
 
-.our-activities:after{
-	content: '';
-	position: absolute;
-	height: 16px;
-	bottom: -16px;
-	left: 0;
-	right: 0;
-	background: url(../images/wave-bg3.png) repeat-x;
-	z-index: 1;
-}
+
 
 .section-title{
 	text-align: center;
 	position: relative;
-	padding-bottom: 14px;
+	padding-bottom: 18px;
 	margin-bottom: 80px;
+	margin-top: 100px;
 }
 
 
 
 .section-title h2{
-	font-size: 36px;
+	font-size: 48px;
 	margin: 0;
 	font-weight: normal;
 	font-family: 'Bubblegum Sans', cursive;
@@ -603,10 +599,6 @@ header .navbar-collapse.collapse{
 	float: right;
 }
 
-
-
-
-
 /* Images uniformes */
 .card-img-top {
   height: 220px;       /* même hauteur pour toutes */
@@ -663,17 +655,7 @@ header .navbar-collapse.collapse{
 	position: relative;
 }
 
-.about-us:after{
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -16px;
-	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	z-index: 1;
-}
+
 
 .about-content{
 	margin-bottom: 30px;
@@ -722,17 +704,7 @@ header .navbar-collapse.collapse{
 	position: relative;
 }
 
-.faculty:after{
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0px;
-	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	transform: rotate(180deg);
-}
+
 
 .faculty-single{
 	text-align: center;
@@ -812,17 +784,6 @@ header .navbar-collapse.collapse{
 	position: relative;
 }
 
-.events:after{
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -16px;
-	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	z-index: 1;
-}
 
 .event-single{
 	background: #fff;
@@ -962,18 +923,7 @@ header .navbar-collapse.collapse{
 	position: relative;
 }
 
-.testimonial:after{
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0px;
-	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	transform: rotate(180deg);
-}
-	
+
 .testimonial-slider-wrapper-outer{
 	background: #cde686;
 	max-width: 960px;
@@ -1045,17 +995,6 @@ header .navbar-collapse.collapse{
 	position: relative;
 }
 
-.photo-gallery:after{
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -16px;
-	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	z-index: 1;
-}
 
 .photo-single{
 	padding: 8px;
@@ -1114,17 +1053,7 @@ header .navbar-collapse.collapse{
 	position: relative;
 }
 
-.contactus:after{
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0px;
-	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	transform: rotate(180deg);
-}
+
 
 .contact-form .form-control{
 	border: none;
@@ -1458,13 +1387,18 @@ footer.footer{
   overflow: hidden;
   width: 100%;
 }
-
-.scrolling-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  width: max-content;
-  transform: translateX(0);
-}
+	
+			.scrolling-wrapper .card {
+				box-shadow:0 8px 32px 0 rgba(0,0,0,0.18), 0 1.5px 6px 0 rgba(0,0,0,0.10);
+				border-radius: 10px;
+				background: white;
+				border: 0;
+				transition: box-shadow 0.3s, transform 0.3s;
+			}
+			.scrolling-wrapper .card:hover {
+				box-shadow:0 12px 40px 0 rgba(0,0,0,0.28), 0 3px 12px 0 rgba(0,0,0,0.18);
+				transform: translateY(-6px) scale(1.03);
+			}
 
 
 .user-select-none {
@@ -1474,6 +1408,46 @@ footer.footer{
   -ms-user-select: none; /* IE10+ */
 }
 
+.carousel, .carousel-inner, .carousel-item {
+      height: 88vh; /* pleine hauteur */
+    }
+
+    .carousel-item img {
+      object-fit: cover; /* couvre toute la hauteur en gardant proportions */
+      width: 100%;
+      height: 100%;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+      width: 5%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-size: 100%, 100%;
+      background-image: none; /* supprime les icones par défaut */
+    }
+
+    /* Crée des flèches plus grandes */
+    .carousel-control-prev-icon::after {
+      content: '❮';
+      font-size: 5rem;
+      color: white;
+    }
+
+    .carousel-control-next-icon::after {
+      content: '❯';
+      font-size: 5rem;
+      color: white;
+    }
 
 
+.card:hover {
+	transform: scale(1.045);
+	box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+	z-index: 2;
+}
+.card {
+	transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s;
+}
 
