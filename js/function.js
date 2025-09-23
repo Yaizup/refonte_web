@@ -15,19 +15,7 @@
 	/* Stickey Header */
 
 	
-	/* Top Menu */
-	$(document).on('click','.navbar-nav li a, #responsive-menu ul li a',function(){
-		if($(this).hasClass("has-popup")) return false;
-		var id = $(this).attr('href');
-		if($(id).length) {
-			var h = parseFloat($(id).offset().top);
-			$('body,html').stop().animate({
-				scrollTop: h - 70
-			}, 800);
-			return false;
-		}
-		
-	});
+
 	
 	/* Pop up page*/
 	var $haspopup = $(".gallery"); 
@@ -147,4 +135,57 @@
 		}
 	});
 	
+	// Validation Bootstrap pour le formulaire de contact
+	(function () {
+	  'use strict';
+	  var forms = document.querySelectorAll('.needs-validation');
+	  Array.prototype.slice.call(forms).forEach(function (form) {
+	    form.addEventListener('submit', function (event) {
+	      if (!form.checkValidity()) {
+	        event.preventDefault();
+	        event.stopPropagation();
+	      } else {
+	        // Simulate AJAX success
+	        event.preventDefault();
+	        document.getElementById('formSuccess').classList.remove('d-none');
+	        document.getElementById('formError').classList.add('d-none');
+	        form.reset();
+	        form.classList.remove('was-validated');
+	      }
+	      form.classList.add('was-validated');
+	    }, false);
+	  });
+	})();
+	
+// --- Scrollspy & Active nav ---
+$(document).ready(function() {
+	// IDs des sections à surveiller (doivent correspondre aux href des nav-link)
+	var sectionIds = [];
+	$('.navbar-nav .nav-link').each(function() {
+		var href = $(this).attr('href');
+		if (href && href.startsWith('#') && $(href).length) {
+			sectionIds.push(href);
+		}
+	});
+
+	function onScroll() {
+		var scrollPos = $(window).scrollTop();
+		var offset = 120; // Décalage pour header
+		var currentId = null;
+		for (var i = 0; i < sectionIds.length; i++) {
+			var id = sectionIds[i];
+			var sectionTop = $(id).offset().top - offset;
+			if (scrollPos >= sectionTop) {
+				currentId = id;
+			}
+		}
+		// Met à jour la classe active
+		$('.navbar-nav .nav-link').removeClass('active');
+		if (currentId) {
+			$('.navbar-nav .nav-link[href="' + currentId + '"]').addClass('active');
+		}
+	}
+	$(window).on('scroll', onScroll);
+	onScroll(); // Initial
+});
 })(jQuery);

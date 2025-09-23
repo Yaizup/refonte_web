@@ -1,3 +1,25 @@
+/* Ombre douce uniquement sur le dessus des images des cards de type ULM */
+.card-img-bottom.shadow-top {
+	box-shadow: 0 -14px 24px -6px rgba(0,0,0,0.12);
+}
+/* Agrandir la hauteur des images du carrousel horizontal d'activités */
+.scrolling-wrapper .card-img-top {
+	height: 240px;
+	object-fit: cover;
+}
+/* Effet accrocheur pour la phrase d'achat */
+.subtitle-achat {
+	font-style: italic;
+	letter-spacing: 0.5px;
+	text-shadow: 0 2px 8px rgba(255, 186, 73, 0.10), 0 1px 0px #fff;
+	font-weight: 600;
+	transition: text-shadow 0.2s, filter 0.2s;
+	filter: brightness(1.01);
+}
+.subtitle-achat:hover {
+	text-shadow: 0 4px 16px rgba(255, 186, 73, 0.18), 0 1px 0px #fff;
+	filter: brightness(1.04);
+}
 /* Sous-titres principaux (ex: Il existe 6 classes d’ULM) */
 .main-section-subtitle {
 	font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
@@ -479,9 +501,6 @@ header .navbar-collapse.collapse{
 .section-title{
 	text-align: center;
 	position: relative;
-	padding-bottom: 18px;
-	margin-bottom: 80px;
-	margin-top: 100px;
 }
 
 
@@ -1429,17 +1448,32 @@ footer.footer{
     }
 
     /* Crée des flèches plus grandes */
-    .carousel-control-prev-icon::after {
-      content: '❮';
-      font-size: 5rem;
-      color: white;
-    }
 
-    .carousel-control-next-icon::after {
-      content: '❯';
-      font-size: 5rem;
-      color: white;
-    }
+		.carousel-control-prev-icon::after {
+			content: '❮';
+			font-size: 5rem;
+			color: white;
+			text-shadow:
+				0 0 8px #000,
+				0 2px 8px #000,
+				0 0 2px #fff,
+				1px 1px 0 #fff,
+				-1px -1px 0 #fff;
+			filter: drop-shadow(0 0 6px #fff) drop-shadow(0 0 10px #000);
+		}
+
+		.carousel-control-next-icon::after {
+			content: '❯';
+			font-size: 5rem;
+			color: white;
+			text-shadow:
+				0 0 8px #000,
+				0 2px 8px #000,
+				0 0 2px #fff,
+				1px 1px 0 #fff,
+				-1px -1px 0 #fff;
+			filter: drop-shadow(0 0 6px #fff) drop-shadow(0 0 10px #000);
+		}
 
 
 .card:hover {
@@ -1451,3 +1485,52 @@ footer.footer{
 	transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s;
 }
 
+/* Formulaire de contact - Glassmorphism & boutons */
+.glass-input {
+  background:rgba(255,255,255,0.7)!important;
+  border:1.5px solid #ffe5b2!important;
+  box-shadow:0 2px 16px 0 rgba(255,152,0,0.08),0 1.5px 6px 0 rgba(255,152,0,0.06);
+  border-radius:1.5rem!important;
+  transition:box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+.glass-input:focus {
+  background:rgba(255,255,255,0.95)!important;
+  border-color:#ff9800!important;
+  box-shadow:0 4px 32px 0 rgba(255,152,0,0.18),0 1.5px 6px 0 rgba(255,152,0,0.10);
+}
+.form-floating>label {
+  color:#ff9800;
+  font-family:'Bubblegum Sans',cursive;
+  letter-spacing:0.5px;
+}
+.form-control:focus~label {
+  color:#ff9800!important;
+}
+.form-control, .form-control:focus {
+  font-size:1.08rem;
+}
+.btn-orange {
+  background:linear-gradient(90deg,#ff9800 60%,#ffd180 100%);
+  color:#fff;
+  border:none;
+  font-family:'Bubblegum Sans',cursive;
+  font-size:1.1rem;
+  box-shadow:0 4px 24px 0 rgba(255,152,0,0.18),0 1.5px 6px 0 rgba(255,152,0,0.10);
+  transition:background 0.2s,box-shadow 0.2s;
+}
+.btn-orange:hover {
+  background:linear-gradient(90deg,#ffd180 60%,#ff9800 100%);
+  color:#fff;
+  box-shadow:0 8px 32px 0 rgba(255,152,0,0.22),0 1.5px 6px 0 rgba(255,152,0,0.12);
+}
+
+.btn-orangee {
+	background-color: #ff5722;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	transition: background 0.2s;
+}
+.btn-orangee:hover {
+	background-color: #d84315;
+	color: #fff;
+}
